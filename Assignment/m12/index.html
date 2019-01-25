@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>Webpage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  h1 {
+    text-align: center;
+  }
+  body {
+    background-color: lavender;
+  }
+  p.inset {border-style: inset;}
+</style>
+  <script type="text/javascript" charset="utf-8">
+    function check()
+    {
+      if(document.getElementById('myInput').value=="12345")
+      {
+        if(document.getElementById('username').value=="") {
+
+        alert("please enter your name");
+        return false;
+          
+        }
+        else {
+        if (document.getElementById('comment').value=="")
+      {
+        alert("please enter your comment");
+        return false;
+      }
+    }
+  } else {
+    alert("wrong password");
+    return false
+  }
+  return true;
+}
+function appendComment() {
+      text = comment.value;
+      text1 = username.value;
+      document.getElementById("para").innerHTML += '<p>' + '<b>'+ text + '</br>' + '<sub>' + text1+ '</sub>' + '</p>';
+    }
+
+  </script>
+  
+</head>
+<body>
+<div class="container">
+  <div class="page-header">
+    <h1>Webpage</h1>
+  </div>
+  <h2>Form</h2>
+    <b>username:</b><br>
+    <input type="text" id="username" name="usrname" required>
+    <br>
+    <b>comment:</b><br>
+    <input type="text" id="comment" name="cmment" required>
+    <br>
+    <b>password:</b><br>
+    <input type="password" id="myInput" name="psw" required>
+    <br>
+    <button type ="submit" onclick="appendComment(); check();">Post Comment</button>
+    <br>
+    <!-- <input type="submit" value="Submit"> -->
+</div>
+<p id ="para"></p>
+</body>
+      
+
+
+
+
+
+
+
+
+
+
+
